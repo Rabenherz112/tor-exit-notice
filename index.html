@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Tor Exit Relay</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 0;
+                text-align: center;
+                background-color: #f0f0f0;
+            }
+    
+            header {
+                background-color: purple;
+                color: #fff;
+                padding: 1rem;
+            }
+    
+            /* Add space on the left and right sides of the content */
+            main {
+                max-width: 1000px;
+                margin: 0 auto;
+                padding: 1rem;
+            }
+    
+            h1 {
+                margin: 0 0 0.2rem; /* Adjust the bottom margin to move it closer to the next element */
+                font-size: 2rem;
+                font-weight: bold;
+            }
+    
+            h6 {
+                font-size: 1rem;
+                font-weight: normal;
+                margin: 0; /* Remove margin for the h6 element to make it closer to the h1 */
+            }
+    
+            /* Add some spacing between sections */
+            h2, p {
+                margin-top: 2rem;
+            }
+    
+            /* Style the links */
+            a {
+                color: purple;
+                text-decoration: none;
+            }
+    
+            a:hover {
+                text-decoration: underline;
+            }
+    
+            /* Adjust font sizes */
+            h2 {
+                font-size: 1.5rem;
+            }
+    
+            p {
+                font-size: 1rem;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Tor Exit Relay</h1>
+            <h6>This is a TOR Exit Relay, proudly provided by YOURNAMEHERE</h2>
+        </header>
+        <main>
+            <h2>What is TOR?</h2>
+            <p>
+                <a href="https://2019.www.torproject.org/about/overview.html.en">The
+                    Tor network</a> is run by some 5000 volunteers who use the
+                free
+                software provided by the Tor Project to run Tor routers.
+                Client connections are routed through multiple relays, and are
+                multiplexed together on the connections between relays.
+                The system does not record logs of client connections or
+                previous
+                hops.
+            </p>
+            <p>
+                This is because the Tor network is a censorship resistance,
+                privacy,
+                and anonymity system used by <a
+                    href="https://www.torproject.org/about/torusers.html.en">whistle
+                    blowers, journalists,
+                    Chinese
+                    dissidents skirting the Great Firewall, abuse victims,
+                    stalker
+                    targets, the US military, and law enforcement,</a> just to
+                name a
+                few.
+            </p>
+            <p>
+                Unfortunately, some people misuse the network. However, compared
+                to
+                the rate of legitimate use (the IP range in question processes
+                nearly a gigabit of traffic per second), <a
+                    href="https://support.torproject.org/abuse/">abuse
+                    complaints are
+                    rare.</a>
+            </p>
+            <h2>Why May Administrators See This IP in Their Logs?</h2>
+            <p>
+                If you are an administrator or run a website, you may see the IP
+                address of a TOR exit relay in your server logs when users
+                access
+                your website through the TOR network. This happens because the
+                last
+                node in the TOR network, known as the exit relay, is responsible
+                for
+                sending the user's request to the intended website on the
+                regular
+                internet. As a result, your website's server logs will record
+                the IP
+                address of the TOR exit relay, not the original user's IP
+                address.<br>
+                <b>It is essential to understand that while the IP address in
+                    the
+                    logs
+                    belongs to the TOR exit relay, the actual user remains
+                    anonymous
+                    as
+                    their original IP address is hidden behind multiple layers
+                    of
+                    encryption and relay nodes.</b>
+            </p>
+            <h2>Why Administrators Shouldn't Block TOR Exit Node IPs</h2>
+            <p>
+                Blocking TOR exit node IPs might seem like a tempting solution
+                to
+                prevent potential abuse or security threats, but it can have
+                unintended consequences and hinder legitimate user access. Here
+                are
+                some key reasons why administrators should reconsider blocking
+                TOR
+                exit node IPs:
+            </p>
+            <p>
+                <b>Preserving User Anonymity:</b><br>
+                TOR is designed to provide online
+                anonymity for its users. By blocking TOR exit node IPs,
+                administrators may inadvertently deny access to users who rely
+                on
+                TOR for genuine privacy and security concerns. People in
+                repressive
+                regimes, journalists, whistleblowers, and activists often use
+                TOR to
+                access information safely and communicate without fear of
+                surveillance.
+            </p>
+            <p>
+                <b>Maintaining Internet Freedom:</b><br>Embracing TOR and
+                allowing its
+                users
+                access fosters an open and free internet. Blocking TOR exit
+                nodes
+                could be seen as an attempt to restrict the flow of information
+                and
+                impede the principles of a decentralized and open web.
+            </p>
+            <h2>What can administrators do instead of blocking this exit relay?</h2>
+            <p>
+                The Tor Project provides an automated DNSRBL for you to query to
+                flag posts coming from Tor nodes as requiring special review.
+                You can also use <a
+                    href="https://www.torproject.org/projects/tordnsel.html.en">this
+                    DNSRBL</a> to only allow Tor IPs to read but
+                not
+                post comments.
+            </p>
+            <p>
+                However, be aware that this may be just one jerk amongst many
+                legitimate Tor users who use your forums.
+                You might have luck getting rid of this jerk by temporarily
+                limiting
+                account creation to require Gmail accounts before posting, or by
+                requiring account creation be done over non-Tor before posting.
+            </p>
+            <p>
+                In general, we believe that problems like this are best solved
+                by
+                improving your service to defend against the attack from the
+                Internet at large.
+                Brute force login attempts can be reduced/slowed by Captchas,
+                which
+                is the approach taken by Gmail for this same problem.
+                In fact, <a
+                    href="https://code.google.com/apis/recaptcha/intro.html">Google
+                    provides a free Captcha service, complete with code</a>
+                for easy inclusion in a number of systems to help other sites
+                deal
+                with this issue.
+            </p>
+        </main>
+    </body>
+</html>
