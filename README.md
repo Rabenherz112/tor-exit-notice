@@ -4,11 +4,13 @@ This project provides a simple HTML file that can be used as a website template 
 
 ## Usage
 
-To use this template, simply download the `index.html` file and replace the text "YOURNAMEHERE" with your own name or the name of your organization. You can then customize the website as needed to fit your specific needs.
+To use this template, simply download the `custom-notice.html` or `default-notice.html` file and replace the text "YOURNAMEHERE" AND "FIXME" with your own name or the name of your organization. You can then customize the website as needed to fit your specific needs.
 
 ## Preview
 
-![Preview](preview.png)
+| Default Template | Custom Template |
+| :---: | :---: |
+| ![Default Template](default-preview.png) | ![Custom Template](custom-preview.png) |
 
 ## License
 
